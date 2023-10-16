@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from .models import *
+from .model import goods
 from django.views.generic import ListView
 
 
 class GoodsAll(ListView):
-  pass
+  model = goods
+  template_name = 'main/goodsall.html'
