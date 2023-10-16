@@ -1,4 +1,5 @@
 from django.shortcuts import render
+
 from .model import goods
 from django.views.generic import ListView
 
