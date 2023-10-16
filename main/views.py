@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from .model import buyers
-from django.views.generic import ListView, CreateView
+
+from .model import goods
+from django.views.generic import ListView
 
 
-class BuyersList(ListView):
-  model = buyers
-  template_name = 'main/buyerslist.html'
+class GoodsAll(ListView):
+  model = goods
+  template_name = 'main/goodsall.html'
