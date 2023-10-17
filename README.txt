@@ -5,6 +5,7 @@ python-dotenv       //// команда pip install python-dotenv
 psycopg2            //// команда pip install psycopg2
 Pillow              //// команда pip install Pillow
 
++ установленный на системе postgresql
 
 В директории shop/shopet создать файл .env, в этом файле указать приватные переменные
 ниже находится пример заполненого файла:
