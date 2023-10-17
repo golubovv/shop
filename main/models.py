@@ -89,7 +89,7 @@ class PropertyGoods(models.Model):
     unitProperty = models.CharField(max_length=150, verbose_name='Еденица измерения')       # Еденица измерения свойства или название материала
     quantyProperty = models.IntegerField(default=0, verbose_name='Количество')              # Количественная часть
     boolProperty = models.BooleanField(default=False, verbose_name='Свойство Да/Нет')       # Указать назначение свойства да или нет
-    boolValueProperty = models.BooleanField(default=False, verbose_name='Значение Да/Нет')       # Значение булевого свойства
+    boolValueProperty = models.BooleanField(default=False, verbose_name='Значение Да/Нет')  # Значение булевого свойства
 
     def __str__(self):
         return '{0} {1} {2}'.format(self.nameProperty, self.quantyProperty, self.unitProperty)
