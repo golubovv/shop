@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 from dotenv import load_dotenv
-from os import getenv
+from os import getenv, path
 
 load_dotenv()
 
@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'shopet.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': getenv('ENGINE', ''),
         'NAME': getenv('DATABASE', ''),
         'USER': getenv('USER', ''),
         'PASSWORD': getenv('PASSWORD', ''),
         'HOST': getenv('DB_HOST', ''),
-        'PORT': getenv('DB_PORT', '')
     }
 }
 
@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 
@@ -128,6 +128,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
+
+MEDIA_ROOT = path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
